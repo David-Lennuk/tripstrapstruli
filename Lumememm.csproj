@@ -57,27 +57,21 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Remove="DateTimeP.xaml" />
-	  <MauiXaml Remove="RGB_mudeliPage.xaml" />
 	  <MauiXaml Remove="StartPage.xaml" />
-	  <MauiXaml Remove="StepperSliderP.xaml" />
+	  <MauiXaml Remove="trips.xaml" />
 	</ItemGroup>
 
 	<ItemGroup>
 	  <None Remove="Resources\Fonts\Lovesive 400.otf" />
+	  <None Remove="Resources\Images\alal.jpeg" />
+	  <None Remove="Resources\Images\play.png" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <EmbeddedResource Include="DateTimeP.xaml">
-	    <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-	  </EmbeddedResource>
-	  <EmbeddedResource Include="RGB_mudeliPage.xaml">
-	    <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-	  </EmbeddedResource>
 	  <EmbeddedResource Include="StartPage.xaml">
 	    <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
 	  </EmbeddedResource>
-	  <EmbeddedResource Include="StepperSliderP.xaml">
+	  <EmbeddedResource Include="trips.xaml">
 	    <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
 	  </EmbeddedResource>
 	</ItemGroup>
@@ -86,12 +80,6 @@
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <Compile Update="RGB_mudeliPage.xaml.cs">
-	    <DependentUpon>RGB_mudeliPage.xaml</DependentUpon>
-	  </Compile>
 	</ItemGroup>
 
 </Project>

@@ -2,8 +2,8 @@
 
 public partial class StarPage : ContentPage
 {
-    public List<ContentPage> lehed = new List<ContentPage>() { new DateTimePage(1), new StepperSliderPage(1), new RGB_mudeliPage(1) };
-    public List<string> tekstid = new List<string> { "Time", "Slider", "RGB" };
+    public List<ContentPage> lehed = new List<ContentPage>() { new TicTacToePage() };
+    public List<string> tekstid = new List<string> { "Trips" };
 
     ScrollView sv;
     VerticalStackLayout vsl;
@@ -25,10 +25,11 @@ public partial class StarPage : ContentPage
                 FontFamily = "Lovesive 400",
                 FontSize = 30
             };
+
             vsl.Add(nupp);
+
             nupp.Clicked += Lehte_avamine;
         }
-
 
         sv = new ScrollView { Content = vsl };
         Content = sv;
@@ -37,6 +38,7 @@ public partial class StarPage : ContentPage
     private async void Lehte_avamine(object? sender, EventArgs e)
     {
         Button btn = (Button)sender;
+
         await Navigation.PushAsync(lehed[btn.ZIndex]);
     }
 
